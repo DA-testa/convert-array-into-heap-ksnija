@@ -12,7 +12,7 @@ def build_heap(data):
         sift_down(i, data, swaps)
     return swaps
 
-def sift_down(i, data):
+def sift_down(i, data, swaps):
     swaps = []
     n = len(data)
     left = 2*i+1
