@@ -18,7 +18,7 @@ def sift_down(i, data, swaps):
     left = 2*i+1
     right = 2*i+2
 
-    min_idx = 1
+    min_idx = i
     if left<n and data[left]<data[min_idx]:
         min_idx = left
     if right<n and data[right]<data[min_idx]:
@@ -26,7 +26,7 @@ def sift_down(i, data, swaps):
     if i != min_idx:
         swaps.append((i, min_idx))
         data[i], data[min_idx] = data[min_idx], data[i]
-        sift_down(data, min_idx, swaps)
+        sift_down(min_idx, data, swaps)
     return swaps
 
 def main():
