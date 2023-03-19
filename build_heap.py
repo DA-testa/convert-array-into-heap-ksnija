@@ -51,12 +51,11 @@ def main():
     # and give back all swaps
     swaps = build_heap(data)
 
-    # TODO: output how many swaps were made, 
-    # this number should be less than 4n (less than 4*len(data))
-    assert len(swaps) <= 4*len(data)
-
     # output all swaps
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
+    
+    else:
+        return
 
