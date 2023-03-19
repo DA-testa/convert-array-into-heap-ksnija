@@ -9,8 +9,7 @@ def build_heap(data):
     # try to achieve  O(n) and not O(n2)
     n = len(data)
     for i in range(n // 2, -1, -1):
-        swaps += sift_down(i, data)
-
+        sift_down(data,i,swaps)
     return swaps
 
 def sift_down(i, data):
@@ -27,8 +26,7 @@ def sift_down(i, data):
     if i != min:
         swaps.append((i, min))
         data[i], data[min] = data[min], data[i]
-        swaps += sift_down(min, data)
-
+        sift_down(data,min,swaps)
     return swaps
 
 def main():
